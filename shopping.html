@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+           
+           @media all and(min-width:576px) {
+            #exclusive-brands {max-width: 540px;}
+            #image3 {display: block;}
+            #image4 {display: block;}
+            #image1 {width: 25%;}
+            #image2 {width: 25%;}
+           }
+            @media all and (min-width:778px) {
+                #shopping-container {max-width: 720px; height: 1450px;}
+                #shopping-item {width: 50%;}
+                #detailed-button {margin-left: 77%;} 
+                #more-pages {padding-bottom: 40px;}
+                
+            }
+           .shopping-container {
+            max-width: 300px;
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            height: 2900px;
+            margin-top: 20px;
+
+           }
+           .shopping-row {
+            padding-bottom: 52px;
+            position: relative;
+            display: block;
+            
+
+
+           }
+           .shopping-item {
+            margin-bottom: 30px;
+            width: 100%;
+            float: left;
+            position: relative;
+            min-height: 1px;
+            padding-left: 15px;
+            padding-right: 15px;
+            
+
+           }
+           .shopping-image {
+            border: 1px dashed #b7b7b7;
+            padding: 25px 20px;
+            position: relative;
+            
+            display: block;
+            width: 100%;
+            float: left;
+            overflow: hidden;
+            height: 300px;
+           }
+           .image1 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 100%;
+            cursor: pointer;
+           }
+           .image1:hover {
+            transform: scale(1.1);
+           }
+           .shopping-image-prices {
+            position: absolute;
+            bottom: 90px;
+            left: 25px;
+            z-index: 1;
+           }
+           .shopping-image-prices-curr {
+            padding: 0 10px 0 9px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            border-radius: 15px 15px 15px 0;
+            background-color: #f4313f;
+            color: white;
+            font-size: 12px;
+            height: 24px;
+            align-items: center;
+            display: flex;
+            text-decoration: line-through;
+           }
+           .shopping-image-prices-old {
+            padding: 0 13px 0 9px;
+            border-radius: 0 15px 15px 15px;
+            background-color: #7439d3;
+            margin-top: 3px;
+            position: relative;
+            color: white;
+            font-size: 12px;
+            height: 24px;
+            line-height: 24px;
+            align-items: center;
+            display: flex;
+           }
+           #shopping-cart {
+            font-size: 25px;
+            color: #006d6d;
+            position: absolute;
+            
+            bottom: 24px;    
+            cursor: pointer;      
+         }
+           .shopping-image-title1 {
+            position: relative;
+            bottom: 30px;
+            margin-left: 30px;
+            
+           }
+           .detailed-button {
+            position: relative;
+            bottom: 50px;
+            margin-left: 70%;
+            background-color: #006d6d;
+            border-radius: 20px;
+            color: white;
+            border: none;
+            padding: 9px;
+            cursor: pointer;
+           }
+           .detailed-button:hover {
+            color: black;
+           }
+           .shopping-image-discount {
+            position: absolute;
+            right: 40px;
+            bottom: 160px;
+            background-image: url(discount.png);
+            background-position: left center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            font-size: 20px;
+            color: white;
+            padding: 5px 10px 5px 10px;
+           }
+           .exclusive-brands-container {
+            max-width: 400px;
+            width: 100%;
+            padding-left: 15px;
+            padding-right: 15px;
+            margin-left: auto;
+            margin-right: auto;
+           }
+           .exclusive-brands-content {
+            padding-bottom: 52px;
+            position: relative;
+            display: block;
+        
+           }
+           .exclusive-brands-list {
+            width: 100%;
+            display: inline-block;
+            padding: 0 19px;
+            display: flex;
+           }
+           .exclusive-brands-image1 {
+            width: 50%;
+           }
+           .exclusive-brands-image2 {
+            width: 50%;
+           }
+           #image3 {
+            width: 25%;
+            display: none;
+           }
+           .exclusive-brands-image4 {
+            width: 25%;
+            display: none;
+           }
+           .exclusive-brands-image5 {
+            width: 20%;
+            display: none;
+           }
+           .brand-img {
+            
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+            cursor: pointer;
+           
+           }
+           .more-pages {
+            justify-content: center;
+            display: flex;
+            flex: 0 0 100%;
+            max-width: 100%;
+            position: relative;
+            width: 100%;
+            padding-left: 15px;
+            padding-right: 15px;
+            padding-bottom: 15px;
+           }
+           .pagination {
+            display: flex;
+            padding-left: 0;
+            list-style: none;
+            border-radius: 2px;
+            margin-top: 0;
+
+           }
+           .page-link {
+            color: #006d6d;
+            cursor: pointer;
+            background-color: #fff;
+            border-color: #dee2e6;
+            margin-left: 0;
+            border-top-left-radius: 1px;
+            border-bottom-left-radius: 1px;
+            position: relative;
+            display: block;
+            padding: 10px;
+            background-color: white;
+            border:1px solid grey;
+            font-size: 20px;
+           }
+           .page-prev {
+            
+            color: #006d6d;
+            
+            cursor: pointer;
+            background-color: #fff;
+            border-color: #dee2e6;
+            margin-left: 0;
+            border-top-left-radius: 1px;
+            border-bottom-left-radius: 1px;
+            position: relative;
+            display: block;
+            padding: 10px;
+            background-color: white;
+            border:1px solid grey;
+            font-size: 20px;
+           
+           }
+           .page-item {
+            color: #006d6d;
+           
+            cursor: pointer;
+            background-color: #fff;
+            border-color: #dee2e6;
+            margin-left: 0;
+            border-top-left-radius: 1px;
+            border-bottom-left-radius: 1px;
+            position: relative;
+            display: block;
+            padding: 10px;
+            background-color: white;
+            border:1px solid grey;
+            font-size: 20px;
+           }
+        </style>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/css/all.min.css">
+        <link rel="stylesheet" href="style.css">
+        <script src="action.js"></script>
+        <script src="https://kit.fontawesome.com/fb5329bcc8.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <header>
+            <div class="top-bar">
+                    <div class="container-top-bar" id="container-top-bar">
+                        <div class="merge-flex">
+                        <div class="register">
+                            <div class="input-field1">
+                            <input type="text" placeholder="Username"class="register-name" id="register-name" required>
+                            <i class="fa-sharp fa-solid fa-person"></i>
+                            </div>
+                            <div class="input-field1">
+                            <input type="text" placeholder="Password" class="register-pass" id="register-pass" required>
+                            <i class="fa-solid fa-lock"></i>
+                            </div>
+                            
+                            <i class="fa-solid fa-right-to-bracket" id="login-icon"></i>
+                            <a href="registration.html">
+                            <i class="fa-solid fa-address-card" id="register-icon"></i>
+                            </a>
+                           
+
+                            
+                        </div>
+                        
+                        
+                        <!--
+                        <a href="#" class="toggle-button1" id="toggle-button1">
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                        </a>
+                    -->
+                        <div class="contact">
+                            <a href="" class="d1">ჩვენ შესახებ</a>
+                            
+                            <a href="" class="d1">პროდუქტები</a>
+                          
+                            <a href="shopping.html" class="d1"><span style="border-bottom: 3px solid #006d6d;">მაღაზია</span></a>
+                           
+                            <a href="contact.html" class="d1">კონტაქტი</a>
+                            
+
+                        </div>
+                         
+                    </div>
+                    </div>
+                </div>
+            
+            <div class="mid-bar">
+                <div class="mid-container">
+                    <div class="mid-flex">
+                        <div class="zoo-flex">
+                            <a class="zoo-logo" href="index.html">
+                                <img class="zoo-img" src="zoo.svg">
+                            </a>
+                            <a href="shopping.html">
+                                <i class="fa-solid fa-cart-shopping" id="shopping"></i>
+                            </a>
+                        </div>
+                        <div class="search-flex">
+                            <form class="search-form">
+                                <input id="keyword" class="search-input" type="text" name="keyword" placeholder="ძიება" value>
+                                <a href="#" class="search-button"><i class="fa fa-fw fa-search" id="nom"></i></a>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="bot-bar">
+                <div class="menu-bar">
+                    <!--
+                    <a href="#" class="toggle-button" id="toggle-button">
+                    
+                    
+                        <i class="fa-solid fa-bars" onclick="loginButton();"></i>
+                        
+                        
+                    
+                   </a>
+                    <a class="close-button" id="close-button"><i class="fa fa-close"></i></a>
+                -->
+                    <div class="menu-items" id="menu-items">
+                        <div class="menu-items-pos">
+                            <ul class="menu-items-ul">
+                                
+                                <li class="menu-items-li dog" id="dog">
+                                    <a class="menu-items-li1" id="menu-items-li1">
+                                    <i class="fa-solid fa-dog"></i>
+                                        ძაღლი
+                                    </a>
+                                    <div class="dog-search">
+                                        <img src="https://zoocity.ge/storage/1/dzagli.svg" class="dog-img" id="dog-img">
+                                        <a class="dropdown">საკვები</a>
+                                        <a class="dropdown">სასუსნაო</a>
+                                        <a class="dropdown">სათამაშოები</a>
+                                        <a class="dropdown">საწოლები</a>
+                                        <a class="dropdown">მოვლა და ჰიგიენა</a>
+                                        <a class="dropdown">პრეპარატები</a>
+                                        <a class="dropdown">აქსესუარები</a>
+                                        <a class="dropdown">ტანსაცმელი</a>
+
+                                    </div>
+                                </li>
+                                
+                                <li class="menu-items-li cat" id="cat">
+                                    <a class="menu-items-li1" >
+                                        <i class="fa-solid fa-cat"></i>
+                                        კატა
+                                    </a>
+                                    <div class="cat-search">
+                                        <img src="https://zoocity.ge/storage/3/kata.svg" class="cat-img" id="cat-img">
+                                        <a class="dropdown">საკვები</a>
+                                        <a class="dropdown">სასუსნაო</a>
+                                        <a class="dropdown">სათამაშოები</a>
+                                        <a class="dropdown">საწოლები</a>
+                                        <a class="dropdown">მოვლა და ჰიგიენა</a>
+                                        <a class="dropdown">პრეპარატები</a>
+                                        <a class="dropdown">აქსესუარები</a>
+                                        <a class="dropdown">ტანსაცმელი</a>
+                                    </div>
+                                </li>
+                                
+                                <li class="menu-items-li fish" id="fish">
+                                    <a class="menu-items-li1" id="menu-items-li1">
+                                        <i class="fa-solid fa-fish"></i>
+                                        თევზი
+                                    </a>
+                                    <div class="fish-search">
+                                        <img src="https://zoocity.ge/storage/7/tevzi.svg" class="fish-img" id="fish-img">
+                                        <a class="dropdown">საკვები</a>
+                                        <a class="dropdown">სასუსნაო</a>
+                                        <a class="dropdown">სათამაშოები</a>
+                                        <a class="dropdown">საწოლები</a>
+                                        <a class="dropdown">მოვლა და ჰიგიენა</a>
+                                        <a class="dropdown">პრეპარატები</a>
+                                        <a class="dropdown">აქსესუარები</a>
+                                        <a class="dropdown">ტანსაცმელი</a>
+                                    </div>
+                                </li>
+                                <li class="menu-items-li sparrow" id="sparrow">
+                                    <a class="menu-items-li1" id="menu-items=li1">
+                                        <i class="fa-solid fa-crow"></i>
+                                        ჩიტი
+                                    </a>
+                                    <div class="sparrow-search">
+                                        <img src="https://zoocity.ge/storage/5/chiti.svg " class="sparrow-img">
+                                        <a class="dropdown">საკვები</a>
+                                        <a class="dropdown">სასუსნაო</a>
+                                        <a class="dropdown">სათამაშოები</a>
+                                        <a class="dropdown">საწოლები</a>
+                                        <a class="dropdown">მოვლა და ჰიგიენა</a>
+                                        <a class="dropdown">პრეპარატები</a>
+                                        <a class="dropdown">აქსესუარები</a>
+                                        <a class="dropdown">ტანსაცმელი</a>
+                                    </div>
+                                </li>
+                                <li class="menu-items-li other" id="menu-items-li6 menu-items-lii">
+                                    <a class="menu-items-li1">
+                                        <i class="fa-sharp fa-solid fa-otter"></i>
+                                        სხვა
+                                    </a>
+                                    <div class="other-search" id="other">
+                                        <img src="https://zoocity.ge/storage/9/skhva-tskhoveli.svg" class="other-img">
+                                        <a class="dropdown">ზღვის გოჭი</a>
+                                        <a class="dropdown">ზაზუნა</a>
+                                        <a class="dropdown">წყლის კუ</a>
+                                    </div>
+                                </li>
+                                <li class="mtavari" id="menu-items-li1 menu-items-li7 menu-items-lii">
+                                    <a class="menu-items-li1" id="menu-items-li1">
+                                    <i class="fa fa-home"></i>
+                                        მთავარი
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class=""></div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </header>
+        <main>
+            <div class="shopping-container" id="shopping-container">
+                <div class="shopping-title">
+
+                </div>
+                <div class="shopping-row">
+                    <div class="shopping-item" id="shopping-item">
+                        <div class="shopping-image">
+                            <img src="shopping1.png" class="image1">
+                            <div class="shopping-image-prices">
+                                <div class="shopping-image-discount">-25%</div>
+                                <span class="shopping-image-prices-old"> ფასი: 15.9 ლ</span>
+                                <span class="shopping-image-prices-curr">ფასი: 20.4 ლ</span>
+                            </div>
+                            <i class="fa-solid fa-cart-shopping" id="shopping-cart" ></i>
+                        </div>
+                        <button class="detailed-button" id="detailed-button">ვრცლად</button>
+                    </div>
+                    <div class="shopping-item" id="shopping-item">
+                        <div class="shopping-image">
+                            <img src="shopping2.png" class="image1">
+                            <div class="shopping-image-prices">
+                                <div class="shopping-image-discount">-20%</div>
+                                <span class="shopping-image-prices-old"> ფასი: 11.9 ლ</span>
+                                <span class="shopping-image-prices-curr">ფასი: 15.5 ლ</span>
+                            </div>
+                            <i class="fa-solid fa-cart-shopping" id="shopping-cart" ></i>
+                        </div>
+                        <button class="detailed-button" id="detailed-button">ვრცლად</button>
+                    </div>
+                    <div class="shopping-item" id="shopping-item">
+                        <div class="shopping-image">
+                            <img src="shopping3.png" class="image1">
+                            <div class="shopping-image-prices">
+                                <div class="shopping-image-discount">-26%</div>
+                                <span class="shopping-image-prices-old"> ფასი: 7.9 ლ</span>
+                                <span class="shopping-image-prices-curr">ფასი: 10.5 ლ</span>
+                            </div>
+                            <i class="fa-solid fa-cart-shopping" id="shopping-cart" ></i>
+                        </div>
+                        <button class="detailed-button" id="detailed-button">ვრცლად</button>
+                    </div>
+                    <div class="shopping-item" id="shopping-item">
+                        <div class="shopping-image">
+                            <img src="shopping4.png" class="image1">
+                            <div class="shopping-image-prices">
+                                <div class="shopping-image-discount">-34%</div>
+                                <span class="shopping-image-prices-old"> ფასი: 13.9 ლ</span>
+                                <span class="shopping-image-prices-curr">ფასი: 20.5 ლ</span>
+                            </div>
+                            <i class="fa-solid fa-cart-shopping" id="shopping-cart" ></i>
+                        </div>
+                        <button class="detailed-button" id="detailed-button">ვრცლად</button>
+                    </div>
+                    <div class="shopping-item" id="shopping-item">
+                        <div class="shopping-image">
+                            <img src="shopping5.png" class="image1">
+                            <div class="shopping-image-prices">
+                                <div class="shopping-image-discount">-25%</div>
+                                <span class="shopping-image-prices-old"> ფასი: 30 ლ</span>
+                                <span class="shopping-image-prices-curr">ფასი: 43 ლ</span>
+                            </div>
+                            <i class="fa-solid fa-cart-shopping" id="shopping-cart" ></i>
+                        </div>
+                        <button class="detailed-button" id="detailed-button">ვრცლად</button>
+                    </div>
+                    <div class="shopping-item" id="shopping-item">
+                        <div class="shopping-image">
+                            <img src="shopping6.png" class="image1">
+                            <div class="shopping-image-prices">
+                                <div class="shopping-image-discount">-25%</div>
+                                <span class="shopping-image-prices-old"> ფასი: 10.2 ლ</span>
+                                <span class="shopping-image-prices-curr">ფასი: 13 ლ</span>
+                            </div>
+                            <i class="fa-solid fa-cart-shopping" id="shopping-cart" ></i>
+                        </div>
+                        <button class="detailed-button" id="detailed-button">ვრცლად</button>
+                    </div>
+                    <div class="shopping-item" id="shopping-item">
+                        <div class="shopping-image">
+                            <img src="shopping7.png" class="image1">
+                            <div class="shopping-image-prices">
+                                <div class="shopping-image-discount">-29%</div>
+                                <span class="shopping-image-prices-old"> ფასი: 7.1 ლ</span>
+                                <span class="shopping-image-prices-curr">ფასი: 10 ლ</span>
+                            </div>
+                            <i class="fa-solid fa-cart-shopping" id="shopping-cart" ></i>
+                        </div>
+                        <button class="detailed-button" id="detailed-button">ვრცლად</button>
+                    </div>
+                    <div class="shopping-item" id="shopping-item">
+                        <div class="shopping-image">
+                            <img src="shopping8.png" class="image1">
+                            <div class="shopping-image-prices">
+                                <div class="shopping-image-discount">-25%</div>
+                                <span class="shopping-image-prices-old"> ფასი: 15 ლ</span>
+                                <span class="shopping-image-prices-curr">ფასი: 20 ლ</span>
+                            </div>
+                            <i class="fa-solid fa-cart-shopping" id="shopping-cart" ></i>
+                        </div>
+                        <button class="detailed-button" id="detailed-button">ვრცლად</button>
+                    </div>
+                   
+                </div>
+                </div> 
+
+                <div class="more-pages" id="more-pages">
+                    <nav>
+                        <ul class="pagination">
+                            <li>
+                                <span class="page-prev"> < </span>
+                            </li>
+                            <li>
+                                <span class="page-item">1</span>
+                            </li>
+                            <li>
+                                <span class="page-item">2</span>
+                            </li>
+                            <li>
+                                <span class="page-item">3</span>
+                            </li>
+                            <li>
+                                <span class="page-item">4</span>
+                            </li>
+                            <li>
+                                <span class="page-item">5</span>
+                            </li>
+                            <li>
+                                <span class="page-item">6</span>
+                            </li>
+                            <li>
+                                <span class="page-link"> > </span> 
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                
+        </main>
+        <footer>
+            <div class="footer-container">
+                <div class="footer-bar">
+                    <div class="footer-row">
+                        <div class="footer-row-1">
+                            <img class="footer-row-1-img" src="zoo.svg" alt>
+                        </div>
+                        <div class="footer-row-2">
+                            <div class="footer-row-2-links">
+                                <div>
+                                    <a href="#" id="l1">ჩვენ შესახებ</a>
+                                    <a href="#">პროდუქტები</a>
+                                    <a href="#">ლოკაციები</a>
+                                    <a href="#">კონტაქტი</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footer-row-3">
+                            <div>
+                                <div>
+                                    <a href="#">
+                                        <i class="fa-brands fa-facebook" id="facebook"></i><span>Facebook</span></a>
+                                    <a href="#" style="margin-left: 25px;">
+                                        <i class="fa-brands fa-instagram" id="instagram"></i><span>Instagram</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </footer>
+    </body>
+</html>

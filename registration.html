@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/css/all.min.css">
+        <link rel="stylesheet" href="style.css">
+        <script src="action.js"></script>
+        <script src="https://kit.fontawesome.com/fb5329bcc8.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <header>
+            <div class="top-bar">
+                    <div class="container-top-bar" id="container-top-bar">
+                        <div class="merge-flex">
+                        <div class="register">
+                            <div class="input-field1">
+                            <input type="text" placeholder="Username"class="register-name" id="register-name" required>
+                            <i class="fa-sharp fa-solid fa-person"></i>
+                            </div>
+                            <div class="input-field1">
+                            <input type="password" placeholder="Password" class="register-pass" id="register-pass" required>
+                            <i class="fa-solid fa-lock"></i>
+                            </div>
+                            
+                            <i class="fa-solid fa-right-to-bracket" id="login-icon" onclick="loginButton();"></i>
+                            <a href="registration.html">
+                            <i class="fa-solid fa-address-card" id="register-icon"></i>
+                            </a>
+                           
+
+                            
+                        </div>
+                        
+                        
+                        <!--
+                        <a href="#" class="toggle-button1" id="toggle-button1">
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                        </a>
+                    -->
+                        <div class="contact">
+                            <a href="#" class="d1">ჩვენ შესახებ</a>
+                            
+                            <a href="#" class="d1">პროდუქტები</a>
+                          
+                            <a href="shopping.html" class="d1">მაღაზია</a>
+                           
+                            <a href="contact.html" class="d1">კონტაქტი</a>
+                            
+
+                        </div>
+                         
+                    </div>
+                
+                    </div>
+                </div>
+            
+            <div class="mid-bar">
+                <div class="mid-container">
+                    <div class="mid-flex">
+                        <div class="zoo-flex">
+                            <a class="zoo-logo" href="index.html">
+                                <img class="zoo-img" src="zoo.svg">
+                            </a>
+                         <a href="shopping.html">
+                                <i class="fa-solid fa-cart-shopping" id="shopping"></i>
+                            </a> 
+                        </div>
+                        <div class="search-flex">
+                            <form class="search-form">
+                                <input id="keyword" class="search-input" type="text" name="keyword" placeholder="ძიება" value>
+                                <a href="#" class="search-button"><i class="fa fa-fw fa-search" id="nom"></i></a>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="bot-bar">
+                <div class="menu-bar">
+                    <!--
+                    <a href="#" class="toggle-button" id="toggle-button">
+                    
+                    
+                        <i class="fa-solid fa-bars" onclick="loginButton();"></i>
+                        
+                        
+                    
+                   </a>
+                    <a class="close-button" id="close-button"><i class="fa fa-close"></i></a>
+                -->
+                    <div class="menu-items" id="menu-items">
+                        <div class="menu-items-pos">
+                            <ul class="menu-items-ul">
+                                
+                                <li class="menu-items-li dog" id="dog">
+                                    <a class="menu-items-li1" id="menu-items-li1">
+                                    <i class="fa-solid fa-dog"></i>
+                                        ძაღლი
+                                    </a>
+                                    <div class="dog-search">
+                                        <img src="https://zoocity.ge/storage/1/dzagli.svg" class="dog-img" id="dog-img">
+                                        <a class="dropdown">საკვები</a>
+                                        <a class="dropdown">სასუსნაო</a>
+                                        <a class="dropdown">სათამაშოები</a>
+                                        <a class="dropdown">საწოლები</a>
+                                        <a class="dropdown">მოვლა და ჰიგიენა</a>
+                                        <a class="dropdown">პრეპარატები</a>
+                                        <a class="dropdown">აქსესუარები</a>
+                                        <a class="dropdown">ტანსაცმელი</a>
+
+                                    </div>
+                                </li>
+                                
+                                <li class="menu-items-li cat" id="cat">
+                                    <a class="menu-items-li1" >
+                                        <i class="fa-solid fa-cat"></i>
+                                        კატა
+                                    </a>
+                                    <div class="cat-search">
+                                        <img src="https://zoocity.ge/storage/3/kata.svg" class="cat-img" id="cat-img">
+                                        <a class="dropdown">საკვები</a>
+                                        <a class="dropdown">სასუსნაო</a>
+                                        <a class="dropdown">სათამაშოები</a>
+                                        <a class="dropdown">საწოლები</a>
+                                        <a class="dropdown">მოვლა და ჰიგიენა</a>
+                                        <a class="dropdown">პრეპარატები</a>
+                                        <a class="dropdown">აქსესუარები</a>
+                                        <a class="dropdown">ტანსაცმელი</a>
+                                    </div>
+                                </li>
+                                
+                                <li class="menu-items-li fish" id="fish">
+                                    <a class="menu-items-li1" id="menu-items-li1">
+                                        <i class="fa-solid fa-fish"></i>
+                                        თევზი
+                                    </a>
+                                    <div class="fish-search">
+                                        <img src="https://zoocity.ge/storage/7/tevzi.svg" class="fish-img" id="fish-img">
+                                        <a class="dropdown">საკვები</a>
+                                        <a class="dropdown">სასუსნაო</a>
+                                        <a class="dropdown">სათამაშოები</a>
+                                        <a class="dropdown">საწოლები</a>
+                                        <a class="dropdown">მოვლა და ჰიგიენა</a>
+                                        <a class="dropdown">პრეპარატები</a>
+                                        <a class="dropdown">აქსესუარები</a>
+                                        <a class="dropdown">ტანსაცმელი</a>
+                                    </div>
+                                </li>
+                                <li class="menu-items-li sparrow" id="sparrow">
+                                    <a class="menu-items-li1" id="menu-items=li1">
+                                        <i class="fa-solid fa-crow"></i>
+                                        ჩიტი
+                                    </a>
+                                    <div class="sparrow-search">
+                                        <img src="https://zoocity.ge/storage/5/chiti.svg " class="sparrow-img">
+                                        <a class="dropdown">საკვები</a>
+                                        <a class="dropdown">სასუსნაო</a>
+                                        <a class="dropdown">სათამაშოები</a>
+                                        <a class="dropdown">საწოლები</a>
+                                        <a class="dropdown">მოვლა და ჰიგიენა</a>
+                                        <a class="dropdown">პრეპარატები</a>
+                                        <a class="dropdown">აქსესუარები</a>
+                                        <a class="dropdown">ტანსაცმელი</a>
+                                    </div>
+                                </li>
+                                <li class="menu-items-li other" id="menu-items-li6 menu-items-lii">
+                                    <a class="menu-items-li1">
+                                        <i class="fa-sharp fa-solid fa-otter"></i>
+                                        სხვა
+                                    </a>
+                                    <div class="other-search" id="other">
+                                        <img src="https://zoocity.ge/storage/9/skhva-tskhoveli.svg" class="other-img">
+                                        <a class="dropdown">ზღვის გოჭი</a>
+                                        <a class="dropdown">ზაზუნა</a>
+                                        <a class="dropdown">წყლის კუ</a>
+                                    </div>
+                                </li>
+                                <li class="mtavari" id="menu-items-li1 menu-items-li7 menu-items-lii">
+                                    <a class="menu-items-li1" id="menu-items-li1">
+                                    <i class="fa fa-home"></i>
+                                        მთავარი
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class=""></div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </header>
+        <main>
+            <div>
+                
+                    <div class="form-container" id="form-container">
+                        <div class="forms">
+                            <div class="form login">
+                             <span class="form-title">რეგისტრაცია</span>
+                             <form action="#">
+                            <div class="input-field">
+                                <input type="text" placeholder="თქვენი სახელი" id="form-name" required>
+                                <i class="fa-sharp fa-solid fa-person"></i>
+                            </div>
+                            <div class="input-field">
+                                <input type="text" placeholder="ელ. ფოსტა" id="form-mail" required>
+                                <i class="fa-solid fa-square-envelope"></i>
+                            </div>
+                            <div class="input-field">
+                                <input type="password" placeholder="თქვენი პაროლი" id="pass1" required>
+                                <i class="fa-solid fa-lock"></i>
+                            </div>
+                            <div class="input-field">
+                                <input type="password" placeholder="გაიმეორეთ პაროლი" id="pass2" required>
+                                <i class="fa-solid fa-lock"></i>
+                            </div>
+                            <div class="input-field">
+                                <input type="text" placeholder="შინაური ცხოველი" id="form-pet">
+                                <i class="fa-solid fa-dog"></i>
+                            </div>
+                            <div class="ckeckbox-text" style="margin-top: 7px;">
+                                <div class="checkbox-content">
+                                    <input type="checkbox" id="logCheck">
+                                    <label for="logCheck" class="text">დამიმახსოვრე</label>
+                                </div>
+                               
+                            </div>
+                            <div class="error" id="error">
+                                <p class="error-p" id="error-p" style="color: red; text-align: center;"></p>
+                            </div>
+                            <div class="input-field button">
+                                <input type="button" value="რეგისტრაცია" onclick="Registration();">
+                            </div>
+                        </form>
+                        </div>
+                        </div>
+                    </div>
+               
+            </div>
+        </main>
+        <footer>
+            <div class="footer-container">
+                <div class="footer-bar">
+                    <div class="footer-row">
+                        <div class="footer-row-1">
+                            <img class="footer-row-1-img" src="zoo.svg" alt>
+                        </div>
+                        <div class="footer-row-2">
+                            <div class="footer-row-2-links">
+                                <div>
+                                    <a href="#" id="l1">ჩვენ შესახებ</a>
+                                    <a href="#">პროდუქტები</a>
+                                    <a href="#">ლოკაციები</a>
+                                    <a href="#">კონტაქტი</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footer-row-3">
+                            <div>
+                                <div>
+                                    <a href="#">
+                                        <i class="fa-brands fa-facebook" id="facebook"></i><span>Facebook</span></a>
+                                    <a href="#" style="margin-left: 25px;">
+                                        <i class="fa-brands fa-instagram" id="instagram"></i><span>Instagram</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </footer>
+    </body>
+</html>
